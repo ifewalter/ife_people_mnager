@@ -1,0 +1,35 @@
+{% include 'html_head.html' with page_title="List of people" %}
+
+
+
+<div class="container">
+    <div class="col-md-6 col-md-offset-2">
+        <h1 class="jumbotron center">And these is the list of people we have now...</h1>
+
+        <br/>
+
+
+    <div class="table-responsive">
+  <table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Email Address</th>
+    </tr>
+
+      {% for person in persons %}
+
+          <tr>
+              <td>{{ person.full_name }}</td>
+              <td>{{ person.email_address }}</td>
+          </tr>
+
+      {% endfor %}
+  </table>
+</div>
+
+
+    </div>
+</div>
+
+
+{% include 'html_foot.html' %}
